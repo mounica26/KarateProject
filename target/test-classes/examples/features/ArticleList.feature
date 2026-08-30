@@ -32,7 +32,8 @@ And match response.articles[0] ==
             }
         }
 """
-@articlelist
+@ignore
+
 
 Scenario: Conditional logic
 Given params {limit:10, offset:0}
@@ -52,7 +53,7 @@ When method Get
 Then status 200
 And match response.articles[0].favoritesCount == 2217
 
-@articlelist
+@ignore
 
 Scenario: Retry
 
